@@ -7,45 +7,71 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+## About sxzhihui/关于 实修智慧
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+ 本项目使用 PHP 框架 [Laravel 5.4](https://doc.laravel-china.org/docs/5.4/) 进行开发。 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 功能具有以下功能
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+- 分类管理
+- 书籍管理
+- 标签管理
+- 评论管理
+- 导航管理
 
-## Learning Laravel
+## 项目概述
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+* 项目名称：sxzhihui
+* 项目运行地址：https://sxzhihui.com/
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+[sxzhihui](https://github.com/lambq/sxzhihui) 基于Laravel 5.4 版本开发。
 
-## Laravel Sponsors
+## 目前运行环境
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
+- Nginx 1.2+
+- PHP 7.1+
+- MySQL 5.7+
 
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
+## 部署/安装
 
-## Contributing
+需要在系统上安装了基本的PHP运行环境、PHP包管理工具composer
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+### 基础安装
 
-## Security Vulnerabilities
+#### 1. 克隆源代码
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+克隆源代码到本地：
+
+    > git clone https://github.com/lambq/sxzhihui.git
+
+#### 2. 安装扩展包依赖
+
+    > composer install
+
+#### 4. 生成配置文件
+
+    > cp .env.example .env
+
+#### 5. 更新laravel框架安全 key
+    
+    > php artisan key:generate
+    
+#### 6. 执行数据库迁移
+
+```shell
+php artisan migrate
+```
+
+#### 7. 填充初始数据
+
+```shell
+php artisan db:seed
+```
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+> 使用 sxzhihui 构建，或者基于 sxzhihui 源代码修改的站点 **必须** 在页脚加上 `Powered by sxzhihui` 字样，并且必须链接到 `http://www.sxzhihui.com` 上。**必须** 在页面的每一个标题上加上 `Powered by sxzhihui` 字样。
+
+在遵守以上规则的情况下，你可以享受等同于 MIT 协议的授权。
+
+或者你可以联系 `any@rushangkeji.com` 购买商业授权，商业授权允许移除页脚和标题的 `Powered by sxzhihui` 字样。
