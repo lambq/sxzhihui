@@ -42,19 +42,27 @@
 
 克隆源代码到本地：
 
-    > git clone https://github.com/lambq/sxzhihui.git
+```shell
+git clone https://github.com/lambq/seo.git
+```
 
 #### 2. 安装扩展包依赖
 
-    > composer install
+```shell
+composer install
+```
 
 #### 4. 生成配置文件
 
-    > cp .env.example .env
+```shell
+cp .env.example .env
+```
 
 #### 5. 更新laravel框架安全 key
-    
-    > php artisan key:generate
+
+```shell
+php artisan key:generate
+```
     
 #### 6. 执行数据库迁移
 
